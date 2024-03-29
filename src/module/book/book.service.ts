@@ -88,7 +88,7 @@ export class BookService {
   async remove(id: number) {
     const book = await this.bookRepo.findOneBy({ id });
     if (!book) {
-      throw new NotFoundException(`${id} not found`);
+      throw new NotFoundException(`${id} not foundd`);
     }
     await this.bookRepo.remove(await this.bookRepo.findOneBy({ id: id }));
   }
