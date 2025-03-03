@@ -32,9 +32,6 @@ export class CategoryService {
       take: pagination.limit,
       skip: pagination.offset
     });
-    // return posts.map((v) => {
-    //   return { name: v.categoryName, id: v.id };
-    // });
     return new ApiResponse(posts, pagination);
   }
 
